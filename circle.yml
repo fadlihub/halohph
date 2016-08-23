@@ -19,3 +19,4 @@ deployment:
     branch: dev
     commands:
       - docker push quay.io/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME:$CIRCLE_BRANCH
+      - curl -X POST --retry 10 --retry-delay 5 -v https://cloud.docker.com/api/app/v1/service/a8f6479a-458c-4e9f-84ae-d94fffe487b2/trigger/d907daed-1ead-44dd-8d8d-1e04fba44440/call/
